@@ -39,7 +39,8 @@ function newMove(e) {
   }, [100]);
 
   player = player === "X" ? "O" : "X";
-  currentPlayer.innerHTML = `JOGADOR DA VEZ: ${player}`;
+  currentPlayer.innerHTML = `
+  Player's turn: ${player}`;
 }
 
 function check() {

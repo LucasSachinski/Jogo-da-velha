@@ -27,39 +27,3 @@
   <script src="script.js"></script>
 </body>
 </html> 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temporizador</title>
-    <style>
-        #timer {
-            font-size: 24px;
-        }
-    </style>
-</head>
-<body>
-    <div id="timer">Tempo restante: 01:00</div>
-
-    <script>
-        let time = 1 * 50; // 2 minutos em segundos
-        function startTimer() {
-            const timerElement = document.getElementById('timer');
-            const timerInterval = setInterval(function() {
-                const minutes = Math.floor(time / 60).toString().padStart(2, '0');
-                const seconds = (time % 60).toString().padStart(2, '0');
-                timerElement.textContent = `Tempo restante: ${minutes}:${seconds}`;
-                if (time === 0) {
-                    clearInterval(timerInterval);
-                    alert("Tempo esgotado!");
-                }
-                time--;
-            }, 1000);
-        }
-
-        // Iniciar o temporizador quando necessário
-        startTimer();
-    </script>
-</body>
-</html>

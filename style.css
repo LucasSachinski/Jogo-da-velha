@@ -43,3 +43,61 @@
     font-size: 50px;
     background: #ffffff;
   }
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash</title>
+    <style>
+        /* Estilos para a tela de carregamento */
+        #loading-screen {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f0f0f0;
+            z-index: 9999;
+        }
+
+        #loading-text {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        #loading-dots {
+            font-size: 36px;
+            display: flex;
+        }
+
+        #loading-dots span {
+            animation: loading 1s infinite;
+            opacity: 0;
+            margin: 0 5px;
+        }
+
+        @keyframes loading {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        /* Estilos para o jogo */
+        #game {
+            display: none; /* Inicialmente oculto */
+            width: 300px;
+            margin: 0 auto;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
